@@ -1,58 +1,109 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛒 CoopShop — E-Commerce & Convenience Store Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![CoopShop Cover Image]([IMAGE PLACEHOLDER: Insert a high-quality cover image showing a modern e-commerce dashboard or retail technology])
 
-## About Laravel
+## 🏷️ Project Information
+| **Attribute** | **Details** |
+| :--- | :--- |
+| **Project Name** | CoopShop — Online Sales Management System |
+| **Version** | v1.0.0 |
+| **Academic Year** | 2024 - 2025 |
+| **Status** | 🟢 Documentation & Testing Phase Completed |
+| **Project Manager** | Huỳnh Tiến Lợi |
+| **Instructor** | Nguyễn Thị Tường Vi |
+| **Tech Stack** | Laravel (PHP), Nginx, Ubuntu Linux, MySQL |
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📊 1. Project Overview
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+![Project Overview Diagram]([IMAGE PLACEHOLDER: Insert an overview diagram such as a Use Case diagram or System Flowchart])
 
-## Learning Laravel
+### 🎯 1.1 Objective
+The objective is to build **CoopShop**, a smart and user-friendly online convenience store platform. The system facilitates seamless product browsing, ordering, and online payments for customers, while providing a robust administrative dashboard for store managers to efficiently track inventory, fulfill orders, and monitor sales metrics.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 🔍 1.2 System Scope & Integrations
+* **In-Scope:** User account management (SMS OTP/Password), Shopping experience (search, cart management), Checkout workflows, Post-sales order tracking, and Admin operations (product, customer, and order management).
+* **Out-of-Scope:** Load/Stress testing beyond baseline requirements, and internal testing of third-party systems.
+* **Third-Party API Integrations:** Payment Gateways (VNPay, MoMo), Shipping/Logistics (GHN), and SMS OTP Services.
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 👥 1.3 User Roles & Permissions
+| **Role** | **System Permissions & Capabilities** |
+| :--- | :--- |
+| **Customer** | Register/Login, search products, manage shopping cart, process payments, track/cancel orders, write reviews, and manage profile information. |
+| **Administrator** | Full operational control: Manage product catalog (CRUD), monitor inventory levels, manage user accounts, confirm/update order statuses, view analytics, and assign Admin roles. |
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+---
 
-## Agentic Development
+## 🏗️ 2. Architecture & Technologies
+CoopShop is built as a highly responsive Web Application, ensuring compatibility across all modern browsers (Chrome, Firefox, Safari, Edge) and devices (Desktop, Tablet, Mobile).
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+**Core Technology Stack:**
+* **Server OS:** Linux (Ubuntu)
+* **Web Server:** Nginx
+* **Backend Framework:** Laravel (PHP)
+* **Database:** MySQL
+* **Design & QA Tools:** Figma (UI/UX), Jira (Agile/Bug Tracking), MS Office (Test cases, Planning).
 
-```bash
-composer require laravel/boost --dev
+---
 
-php artisan boost:install
-```
+## 🗄️ 3. Database Design
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+![Database ERD]([IMAGE PLACEHOLDER: Insert the Entity Relationship Diagram (ERD) from the System Analysis documentation])
 
-## Contributing
+The database architecture is designed to handle core e-commerce workflows efficiently:
+* **Products & Inventory:** Manages SKUs, pricing, categorization, image assets, and stock statuses.
+* **Customers & Orders:** Stores transaction histories, order statuses (Processing, Shipping, Delivered, Canceled), and contact information.
+* **Payments & Shipping:** Manages discount vouchers, e-wallet links, and logistics tracking data.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🧪 4. Quality Assurance (QA) & Testing Process
+A rigorous testing phase guarantees that all functional flows—from authentication to order completion—operate smoothly without critical defects.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+**Testing Strategy & Levels:**
+1. **Unit Testing:** Validates individual code components.
+2. **Integration Testing:** Ensures stable communication with external APIs (VNPay, MoMo, GHN).
+3. **System Testing:** End-to-end workflow verification on a Staging environment (Windows, MySQL).
+4. **UAT (User Acceptance Testing):** Final validation to ensure the system is ready for end-users.
 
-## Security Vulnerabilities
+**Acceptance Criteria:**
+* **100%** of defined Test Cases executed.
+* Test Case Pass Rate of at least **95%**.
+* **Zero (0)** Critical or Blocker bugs remaining.
+* Maximum of 5 Medium priority bugs deferred.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📅 5. Testing Implementation Timeline
+| **Phase** | **Duration** | **Key Activities** | **Assignee** |
+| :--- | :--- | :--- | :--- |
+| **Phase 1** | Sep 15 – Sep 21 | Project kick-off, Test Plan creation, requirement analysis (Use Cases, SRS). | Test Lead & Team |
+| **Phase 2** | Sep 22 – Sep 28 | Drafting Test Cases for core modules (Accounts, Search, Orders, Payments, Shipping) & UI design. | 5 Testers |
+| **Phase 3** | Sep 29 – Oct 05 | Reviewing Test Cases, standardizing documentation, setting up bug tracking tools. | Test Lead & 2 Members |
+| **Phase 4** | Oct 06 – Oct 12 | Test execution (Pass/Fail logging), defect reporting, and bug state tracking. | Entire Team |
+| **Phase 5** | Oct 13 – Oct 19 | Creating Traceability Matrix, writing Test Summary Report, and final handover. | Entire Team |
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## 👥 6. Development & QA Team (Team 2)
+| **Full Name** | **Student ID** | **Role & Main Responsibilities** |
+| :--- | :--- | :--- |
+| **Huỳnh Tiến Lợi** | 030239230117 | **Project Manager** / Test Cases (Account Management) |
+| **Lê Bảo Quốc** | 030239230199 | **Test Lead** / Traceability Matrix & Final Reporting |
+| **Võ Văn Quang** | 030239230196 | **Tester** / Test Plan creation & Progress coordination |
+| **Nguyễn Võ Quỳnh Như** | 030239230174 | **Tester** / Test Cases (Search & Product Viewing) |
+| **Nguyễn Trần Vân Anh** | 030239230011 | **Tester** / Test Cases (Order Management) |
+| **Nguyễn Xuân Quỳnh Anh** | 030239230012 | **Tester** / Test Cases (Payment Processing) |
+| **Cao (Thị) Hà Trang** | 030239230259 | **Tester** / Test Cases (Shipping Management) |
+| **Nguyễn Thị Thu Thảo** | 030239230218 | System Analyst |
+| **Phạm Văn Gia Phú** | 030239230186 | System Analyst |
+
+---
+
+## 📁 7. Project References & Documentation
+* 📄 **CoopShop_Documentation**: Central repository for all project guidelines and specifications.
+* 📄 **Information System Analysis & Design (Phân tích thiết kế HTTT.pdf)**: Detailed requirement specifications, Use Cases, Sequence/Class Diagrams, and UI/UX layouts.
+* 📄 **Software Quality Assurance & Testing (Đảm bảo chất lượng và kiểm thử phần mềm.pdf)**: Comprehensive Test Plan, modular Test Cases, and Traceability Matrix.
+* 🗄️ **coopshopdb.sql**: Database initialization script for schema creation and mock data seeding.
+* 📄 **Database Management Systems (Hệ quản trị cơ sở dữ liệu.docx)**: Operation manual covering database architecture, infrastructure, and performance optimization.
