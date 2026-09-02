@@ -1,79 +1,292 @@
 # 🛒 CoopShop — E-Commerce & Convenience Store Management System
 
-## 🏷️ Project Information
-| **Attribute** | **Details** |
-| :--- | :--- |
-| **Project Name** | CoopShop — Online Sales Management System |
-| **Version** | v1.0.0 |
-| **Academic Year** | 2024 - 2025 |
-| **Status** | 🟢 Documentation & Testing Phase Completed |
-| **Tech Stack** | Laravel (PHP), Nginx, Ubuntu Linux, MySQL |
+A web-based e-commerce and convenience store management system designed to support online shopping and store operations, including product management, order processing, inventory management, shipping, and customer interactions.
+
+> **Project Context:** Academic team project, independently maintained and enhanced as a personal portfolio project.
 
 ---
 
-### 🎯 1.1 Objective
-The objective is to build **CoopShop**, a smart and user-friendly online convenience store platform. The system facilitates seamless product browsing, ordering, and online payments for customers, while providing a robust administrative dashboard for store managers to efficiently track inventory, fulfill orders, and monitor sales metrics.
+## 📌 Overview
 
-### 🔍 1.2 System Scope & Integrations
-* **In-Scope:** User account management (SMS OTP/Password), Shopping experience (search, cart management), Checkout workflows, Post-sales order tracking, and Admin operations (product, customer, and order management).
-* **Out-of-Scope:** Load/Stress testing beyond baseline requirements, and internal testing of third-party systems.
-* **Third-Party API Integrations:** Payment Gateways (VNPay, MoMo), Shipping/Logistics (GHN), and SMS OTP Services.
+**CoopShop** is an e-commerce management system developed to simulate the core operations of a modern convenience store platform.
 
-### 👥 1.3 User Roles & Permissions
-| **Role** | **System Permissions & Capabilities** |
-| :--- | :--- |
-| **Customer** | Register/Login, search products, manage shopping cart, process payments, track/cancel orders, write reviews, and manage profile information. |
-| **Administrator** | Full operational control: Manage product catalog (CRUD), monitor inventory levels, manage user accounts, confirm/update order statuses, view analytics, and assign Admin roles. |
+The system provides separate workflows for customers and administrators, covering product browsing, shopping cart management, order processing, shipping management, inventory operations, and system administration.
+
+The project also provided practical experience in **system analysis, software testing, requirements analysis, and quality assurance**.
 
 ---
 
-## 🏗️ 2. Architecture & Technologies
-CoopShop is built as a highly responsive Web Application, ensuring compatibility across all modern browsers (Chrome, Firefox, Safari, Edge) and devices (Desktop, Tablet, Mobile).
+## ✨ Key Features
 
-**Core Technology Stack:**
-* **Server OS:** Linux (Ubuntu)
-* **Web Server:** Nginx
-* **Backend Framework:** Laravel (PHP)
-* **Database:** MySQL
-* **Design & QA Tools:** Figma (UI/UX), Jira (Agile/Bug Tracking), MS Office (Test cases, Planning).
+### 👤 Customer
 
----
+* User registration and authentication
+* Product browsing and searching
+* Product detail viewing
+* Shopping cart management
+* Order placement
+* Order tracking
+* Product reviews and ratings
 
-## 🗄️ 3. Database Design
+### 🛠️ Administration
 
-![Database ERD]([IMAGE PLACEHOLDER: Insert the Entity Relationship Diagram (ERD) from the System Analysis documentation])
+* Product management
+* Category management
+* Inventory management
+* Order management
+* Customer management
+* Shipping management
+* User and system administration
 
-The database architecture is designed to handle core e-commerce workflows efficiently:
-* **Products & Inventory:** Manages SKUs, pricing, categorization, image assets, and stock statuses.
-* **Customers & Orders:** Stores transaction histories, order statuses (Processing, Shipping, Delivered, Canceled), and contact information.
-* **Payments & Shipping:** Manages discount vouchers, e-wallet links, and logistics tracking data.
+### 🚚 Shipping Management
 
----
+The shipping management workflow supports the processing and monitoring of delivery-related information throughout the order lifecycle.
 
-## 🧪 4. Quality Assurance (QA) & Testing Process
-A rigorous testing phase guarantees that all functional flows—from authentication to order completion—operate smoothly without critical defects.
+Key activities include:
 
-**Testing Strategy & Levels:**
-1. **Unit Testing:** Validates individual code components.
-2. **Integration Testing:** Ensures stable communication with external APIs (VNPay, MoMo, GHN).
-3. **System Testing:** End-to-end workflow verification on a Staging environment (Windows, MySQL).
-4. **UAT (User Acceptance Testing):** Final validation to ensure the system is ready for end-users.
-
-**Acceptance Criteria:**
-* **100%** of defined Test Cases executed.
-* Test Case Pass Rate of at least **95%**.
-* **Zero (0)** Critical or Blocker bugs remaining.
-* Maximum of 5 Medium priority bugs deferred.
+* Managing shipping information
+* Updating shipping status
+* Tracking delivery progress
+* Validating shipping-related business rules
+* Handling shipping workflow exceptions
 
 ---
 
----
+## 🛠️ Technology Stack
+
+| Category        | Technology                   |
+| --------------- | ---------------------------- |
+| Backend         | Laravel / PHP                |
+| Frontend        | Blade, HTML, CSS, JavaScript |
+| CSS Framework   | Tailwind CSS                 |
+| Database        | MySQL                        |
+| Package Manager | Composer, npm                |
+| Build Tool      | Vite                         |
+| Testing         | Functional / Manual Testing  |
+| Version Control | Git & GitHub                 |
 
 ---
 
-## 📁 7. Project References & Documentation
-* 📄 **CoopShop_Documentation**: Central repository for all project guidelines and specifications.
-* 📄 **Information System Analysis & Design (Phân tích thiết kế HTTT.pdf)**: Detailed requirement specifications, Use Cases, Sequence/Class Diagrams, and UI/UX layouts.
-* 📄 **Software Quality Assurance & Testing (Đảm bảo chất lượng và kiểm thử phần mềm.pdf)**: Comprehensive Test Plan, modular Test Cases, and Traceability Matrix.
-* 🗄️ **coopshopdb.sql**: Database initialization script for schema creation and mock data seeding.
-* 📄 **Database Management Systems (Hệ quản trị cơ sở dữ liệu.docx)**: Operation manual covering database architecture, infrastructure, and performance optimization.
+## 🏗️ System Architecture
+
+The application follows a Laravel-based web application architecture.
+
+```text
+┌──────────────────────────┐
+│          User            │
+│ Customer / Administrator │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│       Web Interface      │
+│   Blade / Tailwind CSS   │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│     Laravel Backend      │
+│ Routes / Controllers     │
+│ Models / Business Logic  │
+└────────────┬─────────────┘
+             │
+             ▼
+┌──────────────────────────┐
+│         MySQL            │
+│     Relational Data      │
+└──────────────────────────┘
+```
+
+---
+
+## 🧩 Main System Modules
+
+The system is organized into several major functional modules:
+
+* Authentication & User Management
+* Product & Category Management
+* Shopping Cart
+* Order Management
+* Inventory Management
+* Shipping Management
+* Customer Management
+* Review & Rating
+* Administration
+
+---
+
+## 🧪 Testing & Quality Assurance
+
+Testing focused on validating the functional behavior of the system and ensuring that implemented workflows matched the expected business requirements.
+
+### Shipping Management Testing
+
+My primary testing responsibility focused on the **Shipping Management module**.
+
+Testing activities included:
+
+* Analyzing shipping-related requirements
+* Designing test cases
+* Preparing test scenarios
+* Executing functional test cases
+* Verifying expected and actual results
+* Identifying and documenting defects
+* Performing regression testing after fixes
+
+---
+
+## 🔍 System Analysis
+
+In addition to testing, I contributed to **system analysis** activities throughout the project.
+
+Key activities included:
+
+* Analyzing functional requirements
+* Understanding business workflows
+* Identifying system actors and use cases
+* Analyzing relationships between system modules
+* Reviewing expected system behavior
+* Supporting the definition of functional requirements
+
+This experience helped bridge the gap between **business requirements and system implementation**.
+
+---
+
+## 👩‍💻 My Contributions
+
+My primary responsibilities in the project were **System Analysis and Quality Assurance / Testing**.
+
+### System Analysis
+
+* Analyzed system requirements and business workflows.
+* Contributed to functional analysis of major system modules.
+* Reviewed system behavior against expected business requirements.
+* Supported the analysis of system use cases and workflows.
+
+### QA & Testing
+
+* Designed and executed test cases for the Shipping Management module.
+* Tested shipping workflows and business rules.
+* Documented test results and identified functional defects.
+* Verified defect fixes and performed regression testing.
+* Contributed to overall system quality validation.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure the following tools are installed:
+
+* PHP
+* Composer
+* MySQL
+* Node.js & npm
+* Git
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/CaoTHaTrang/coopshop-ecommerce.git
+cd coopshop-ecommerce
+```
+
+Install PHP dependencies:
+
+```bash
+composer install
+```
+
+Install frontend dependencies:
+
+```bash
+npm install
+```
+
+Create the environment file:
+
+```bash
+cp .env.example .env
+```
+
+Generate the Laravel application key:
+
+```bash
+php artisan key:generate
+```
+
+Configure the database connection in `.env`.
+
+Run database migrations:
+
+```bash
+php artisan migrate
+```
+
+Start the Laravel development server:
+
+```bash
+php artisan serve
+```
+
+Run the frontend development server:
+
+```bash
+npm run dev
+```
+
+> Installation commands may vary depending on the local development environment and project configuration.
+
+---
+
+## 📸 Screenshots
+
+Screenshots of the main application workflows will be added here.
+
+Planned screenshots include:
+
+* Homepage
+* Product listing
+* Product details
+* Shopping cart
+* Checkout
+* Order management
+* Shipping management
+* Administration dashboard
+
+---
+
+## 🔮 Future Improvements
+
+Potential improvements for future versions include:
+
+* Online payment gateway integration
+* Real-time order and shipping tracking
+* Advanced inventory forecasting
+* Improved search and filtering
+* Automated testing
+* Performance optimization
+* Role-based access control improvements
+* Deployment to a production environment
+
+---
+
+## 📚 Project Context
+
+This project was originally developed as part of an academic team project.
+
+The current repository is maintained as a **personal portfolio project**, with a focus on documenting and presenting my individual contributions in:
+
+* System Analysis
+* Software Testing
+* Quality Assurance
+* Shipping Management Testing
+
+---
+
+## 📄 License
+
+This project is maintained for educational and portfolio purposes.
