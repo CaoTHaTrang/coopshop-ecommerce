@@ -1,7 +1,5 @@
 # 🛒 CoopShop — E-Commerce & Convenience Store Management System
 
-![CoopShop Cover Image]([IMAGE PLACEHOLDER: Insert a high-quality cover image showing a modern e-commerce dashboard or retail technology])
-
 ## 🏷️ Project Information
 | **Attribute** | **Details** |
 | :--- | :--- |
@@ -9,15 +7,9 @@
 | **Version** | v1.0.0 |
 | **Academic Year** | 2024 - 2025 |
 | **Status** | 🟢 Documentation & Testing Phase Completed |
-| **Project Manager** | Huỳnh Tiến Lợi |
-| **Instructor** | Nguyễn Thị Tường Vi |
 | **Tech Stack** | Laravel (PHP), Nginx, Ubuntu Linux, MySQL |
 
 ---
-
-## 📊 1. Project Overview
-
-![Project Overview Diagram]([IMAGE PLACEHOLDER: Insert an overview diagram such as a Use Case diagram or System Flowchart])
 
 ### 🎯 1.1 Objective
 The objective is to build **CoopShop**, a smart and user-friendly online convenience store platform. The system facilitates seamless product browsing, ordering, and online payments for customers, while providing a robust administrative dashboard for store managers to efficiently track inventory, fulfill orders, and monitor sales metrics.
@@ -75,29 +67,7 @@ A rigorous testing phase guarantees that all functional flows—from authenticat
 
 ---
 
-## 📅 5. Testing Implementation Timeline
-| **Phase** | **Duration** | **Key Activities** | **Assignee** |
-| :--- | :--- | :--- | :--- |
-| **Phase 1** | Sep 15 – Sep 21 | Project kick-off, Test Plan creation, requirement analysis (Use Cases, SRS). | Test Lead & Team |
-| **Phase 2** | Sep 22 – Sep 28 | Drafting Test Cases for core modules (Accounts, Search, Orders, Payments, Shipping) & UI design. | 5 Testers |
-| **Phase 3** | Sep 29 – Oct 05 | Reviewing Test Cases, standardizing documentation, setting up bug tracking tools. | Test Lead & 2 Members |
-| **Phase 4** | Oct 06 – Oct 12 | Test execution (Pass/Fail logging), defect reporting, and bug state tracking. | Entire Team |
-| **Phase 5** | Oct 13 – Oct 19 | Creating Traceability Matrix, writing Test Summary Report, and final handover. | Entire Team |
-
 ---
-
-## 👥 6. Development & QA Team (Team 2)
-| **Full Name** | **Student ID** | **Role & Main Responsibilities** |
-| :--- | :--- | :--- |
-| **Huỳnh Tiến Lợi** | 030239230117 | **Project Manager** / Test Cases (Account Management) |
-| **Lê Bảo Quốc** | 030239230199 | **Test Lead** / Traceability Matrix & Final Reporting |
-| **Võ Văn Quang** | 030239230196 | **Tester** / Test Plan creation & Progress coordination |
-| **Nguyễn Võ Quỳnh Như** | 030239230174 | **Tester** / Test Cases (Search & Product Viewing) |
-| **Nguyễn Trần Vân Anh** | 030239230011 | **Tester** / Test Cases (Order Management) |
-| **Nguyễn Xuân Quỳnh Anh** | 030239230012 | **Tester** / Test Cases (Payment Processing) |
-| **Cao (Thị) Hà Trang** | 030239230259 | **Tester** / Test Cases (Shipping Management) |
-| **Nguyễn Thị Thu Thảo** | 030239230218 | System Analyst |
-| **Phạm Văn Gia Phú** | 030239230186 | System Analyst |
 
 ---
 
